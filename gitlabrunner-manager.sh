@@ -41,23 +41,23 @@ chmod +x /usr/local/bin/docker-machine
 ### Docker Machine Commands:
 
 # To create EC2 Instance with Key pair (Not working)
-docker-machine --bugsnag-api-token=no-report create --driver amazonec2 --amazonec2-region=ap-southeast-1 --amazonec2-vpc-id=vpc-02508fde8327165ed --amazonec2-subnet-id=subnet-0af6d876b9813e7bf --amazonec2-security-group=gitlab-runner-manager-sg --amazonec2-zone=a --amazonec2-private-address-only=true --amazonec2-tags=runner-manager-name,gitlab-aws-autoscaler,gitlab,true,gitlab-runner-autoscale,true --amazonec2-instance-type=t2.micro --amazonec2-ami=ami-078c1149d8ad719a7 gitlab-runner-without-custom-keypair
+#docker-machine --bugsnag-api-token=no-report create --driver amazonec2 --amazonec2-region=ap-southeast-1 --amazonec2-vpc-id=vpc-02508fde8327165ed --amazonec2-subnet-id=subnet-0af6d876b9813e7bf --amazonec2-security-group=gitlab-runner-manager-sg --amazonec2-zone=a --amazonec2-private-address-only=true --amazonec2-tags=runner-manager-name,gitlab-aws-autoscaler,gitlab,true,gitlab-runner-autoscale,true --amazonec2-instance-type=t2.micro --amazonec2-ami=ami-078c1149d8ad719a7 gitlab-runner-without-custom-keypair
 
 # To create EC2 Instance without Key pair (working)
-docker-machine --bugsnag-api-token=no-report create --driver amazonec2 --amazonec2-region=ap-southeast-1 --amazonec2-vpc-id=vpc-02508fde8327165ed --amazonec2-subnet-id=subnet-0af6d876b9813e7bf --amazonec2-security-group=gitlab-runner-manager-sg --amazonec2-zone=a --amazonec2-private-address-only=true --amazonec2-tags=runner-manager-name,gitlab-aws-autoscaler,gitlab,true,gitlab-runner-autoscale,true --amazonec2-instance-type=t2.micro --amazonec2-ami=ami-078c1149d8ad719a7 gitlab-runner-with-custom-keypair
+#docker-machine --bugsnag-api-token=no-report create --driver amazonec2 --amazonec2-region=ap-southeast-1 --amazonec2-vpc-id=vpc-02508fde8327165ed --amazonec2-subnet-id=subnet-0af6d876b9813e7bf --amazonec2-security-group=gitlab-runner-manager-sg --amazonec2-zone=a --amazonec2-private-address-only=true --amazonec2-tags=runner-manager-name,gitlab-aws-autoscaler,gitlab,true,gitlab-runner-autoscale,true --amazonec2-instance-type=t2.micro --amazonec2-ami=ami-078c1149d8ad719a7 gitlab-runner-with-custom-keypair
 
 # docker-machine commands
 # To list instances
-docker-machine ls
+#docker-machine ls
 
 # To check docker env in the new instance
-docker-machine env runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://10.0.11.80:2376"
-export DOCKER_CERT_PATH="/root/.docker/machine/machines/runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a"
-export DOCKER_MACHINE_NAME="runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a"
+#docker-machine env runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a
+#export DOCKER_TLS_VERIFY="1"
+#export DOCKER_HOST="tcp://10.0.11.80:2376"
+#export DOCKER_CERT_PATH="/root/.docker/machine/machines/runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a"
+#export DOCKER_MACHINE_NAME="runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a"
 # Run this command to configure your shell: 
 # eval $(docker-machine env runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a)
 
 # To SSH into the machine
-docker-machine ssh runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a
+#docker-machine ssh runner-gadzwlsik-gitlab-docker-machine-1697867375-57b3f64a
