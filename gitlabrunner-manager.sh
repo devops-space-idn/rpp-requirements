@@ -3,13 +3,13 @@
 ## Installation on Ubuntu
 
 ### 1. Gitlab Runner 
-```
+
 curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
 sudo apt-get install gitlab-runner
-```
+
 
 ### 2. Docker Installation using the Apt repository
-```
+
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
